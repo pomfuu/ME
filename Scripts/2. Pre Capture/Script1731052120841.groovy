@@ -20,6 +20,8 @@ import com.kms.katalon.core.windows.keyword.WindowsBuiltinKeywords as Windows
 import internal.GlobalVariable
 import io.appium.java_client.android.AndroidDriver
 import io.appium.java_client.android.AndroidKeyCode
+import io.appium.java_client.android.nativekey.AndroidKey
+
 import com.kms.katalon.core.configuration.RunConfiguration
 
 String baseDir = System.getProperty('user.dir')
@@ -108,20 +110,25 @@ Thread.sleep(2000)
 
 Mobile.tap(findTestObject('Object Repository/xpath', ['xpath' : "//android.widget.LinearLayout[3]/android.widget.RelativeLayout[1]/android.widget.FrameLayout[1]/android.widget.ImageView[1]"]), 0)
 Mobile.delay(2)
- 
 Mobile.scrollToText('Save')
 Mobile.tap(findTestObject('Object Repository/xpath', ['xpath' : "//*[@class = 'android.widget.Button' and (@text = 'Save' or . = 'Save') and @resource-id = 'com.emobile.mobileentry:id/save_button_FormAplikasi']"]), 0)
+
+// FORCE SHUT ICR
+Mobile.tap(findTestObject('Object Repository/xpath', ['xpath' : "//*[@class = 'android.widget.Button' and (@text = 'View' or . = 'View') and @resource-id = 'com.emobile.mobileentry:id/btnKartuKeluarga']"]), 0)
+Mobile.tap(findTestObject('Object Repository/xpath', ['xpath' : "//*[@class = 'android.widget.Button' and (@text = 'Save' or . = 'Save') and @resource-id = 'com.emobile.mobileentry:id/save_button_kk']"]), 0)
+Mobile.delay(2)
 
 // -- VIEWING AND MAINTAIN SECTION --
 // 1. KTP Konsumen
 Mobile.tap(findTestObject('Object Repository/xpath', ['xpath' : "//android.widget.RelativeLayout[1]/android.widget.Button[1]"]), 0)
-Mobile.tap(findTestObject('Object Repository/xpath', ['xpath' : "//android.widget.EditText[1]"]), 0)
-Mobile.clearText(findTestObject('Object Repository/xpath', ['xpath' : "//android.widget.EditText[1]"]), 0)
-Mobile.setText(findTestObject('Object Repository/xpath', ['xpath' : "//android.widget.EditText[1]"]), NIK,  0)
+Mobile.tap(findTestObject('Object Repository/xpath', ['xpath' : "//*[@class = 'android.widget.EditText' and @resource-id = 'com.emobile.mobileentry:id/edtNoKtp']"]), 0)
+Mobile.clearText(findTestObject('Object Repository/xpath', ['xpath' : "//*[@class = 'android.widget.EditText' and @resource-id = 'com.emobile.mobileentry:id/edtNoKtp']"]), 0)
+Mobile.setText(findTestObject('Object Repository/xpath', ['xpath' : "//*[@class = 'android.widget.EditText' and @resource-id = 'com.emobile.mobileentry:id/edtNoKtp']"]), NIK,  0)
+Mobile.hideKeyboard();
 
-Mobile.tap(findTestObject('Object Repository/xpath', ['xpath' : "//android.widget.EditText[2]"]), 0)
-Mobile.clearText(findTestObject('Object Repository/xpath', ['xpath' : "//android.widget.EditText[2]"]), 0)
-Mobile.setText(findTestObject('Object Repository/xpath', ['xpath' : "//android.widget.EditText[2]"]), NamaKonsumen,  0)
+Mobile.tap(findTestObject('Object Repository/xpath', ['xpath' : "//*[@class = 'android.widget.EditText' and @resource-id = 'com.emobile.mobileentry:id/edtName']"]), 0)
+Mobile.clearText(findTestObject('Object Repository/xpath', ['xpath' : "//*[@class = 'android.widget.EditText' and @resource-id = 'com.emobile.mobileentry:id/edtName']"]), 0)
+Mobile.setText(findTestObject('Object Repository/xpath', ['xpath' : "//*[@class = 'android.widget.EditText' and @resource-id = 'com.emobile.mobileentry:id/edtName']"]), NamaKonsumen,  0)
 Mobile.hideKeyboard();
 
 Mobile.tap(findTestObject('Object Repository/xpath', ['xpath' : "//*[@class = 'android.widget.ImageView' and @resource-id = 'com.emobile.mobileentry:id/imgCalKTP_KONSUMEN' and (@text = '' or . = '')]"]), 0)
@@ -133,8 +140,34 @@ for (int i = 0; i < TahunDOB.length(); i++) {
 	int keyCode = Character.getNumericValue(digit) + 7
 	driver.pressKeyCode(keyCode)
 }
-
+driver.pressKeyCode(AndroidKeyCode.ENTER)
+driver.pressKeyCode(AndroidKeyCode.ENTER)
 Mobile.hideKeyboard();
+
+Mobile.tap(findTestObject('Object Repository/xpath', ['xpath' : "//*[@class = 'android.widget.EditText' and @resource-id = 'com.emobile.mobileentry:id/edtTempatLahir']"]), 0)
+Mobile.setText(findTestObject('Object Repository/xpath', ['xpath' : "//*[@class = 'android.widget.EditText' and @resource-id = 'com.emobile.mobileentry:id/edtTempatLahir']"]), TempatLahir,  0)
+Mobile.hideKeyboard();
+
+Mobile.tap(findTestObject('Object Repository/xpath', ['xpath' : "//*[@class = 'android.widget.EditText' and @resource-id = 'com.emobile.mobileentry:id/edtAlamat']"]), 0)
+Mobile.setText(findTestObject('Object Repository/xpath', ['xpath' : "//*[@class = 'android.widget.EditText' and @resource-id = 'com.emobile.mobileentry:id/edtAlamat']"]), Alamat,  0)
+Mobile.hideKeyboard();
+
+Mobile.tap(findTestObject('Object Repository/xpath', ['xpath' : "//hierarchy/android.widget.FrameLayout[1]/android.view.ViewGroup[1]/android.widget.FrameLayout[2]/android.widget.RelativeLayout[1]/android.widget.ScrollView[1]/android.widget.RelativeLayout[1]/android.widget.EditText[4]"]), 0)
+Mobile.setText(findTestObject('Object Repository/xpath', ['xpath' : "//hierarchy/android.widget.FrameLayout[1]/android.view.ViewGroup[1]/android.widget.FrameLayout[2]/android.widget.RelativeLayout[1]/android.widget.ScrollView[1]/android.widget.RelativeLayout[1]/android.widget.EditText[4]"]), Provinsi,  0)
+Mobile.hideKeyboard();
+
+Mobile.tap(findTestObject('Object Repository/xpath', ['xpath' : "//*[@class = 'android.widget.EditText' and @resource-id = 'com.emobile.mobileentry:id/edtKota']"]), 0)
+Mobile.setText(findTestObject('Object Repository/xpath', ['xpath' : "//*[@class = 'android.widget.EditText' and @resource-id = 'com.emobile.mobileentry:id/edtKota']"]), Kota,  0)
+Mobile.hideKeyboard();
+
+Mobile.tap(findTestObject('Object Repository/xpath', ['xpath' : "//*[@class = 'android.widget.EditText' and @resource-id = 'com.emobile.mobileentry:id/edtKecamatan']"]), 0)
+Mobile.setText(findTestObject('Object Repository/xpath', ['xpath' : "//*[@class = 'android.widget.EditText' and @resource-id = 'com.emobile.mobileentry:id/edtKecamatan']"]), Kecamatan,  0)
+Mobile.hideKeyboard();
+
+Mobile.tap(findTestObject('Object Repository/xpath', ['xpath' : "//*[@class = 'android.widget.EditText' and @resource-id = 'com.emobile.mobileentry:id/edtKelurahan']"]), 0)
+Mobile.setText(findTestObject('Object Repository/xpath', ['xpath' : "//*[@class = 'android.widget.EditText' and @resource-id = 'com.emobile.mobileentry:id/edtKelurahan']"]), Kelurahan,  0)
+Mobile.hideKeyboard();
+
 Mobile.scrollToText('Save')
 Mobile.tap(findTestObject('Object Repository/xpath', ['xpath' : "//*[@class = 'android.widget.Button' and (@text = 'Save' or . = 'Save') and @resource-id = 'com.emobile.mobileentry:id/save_button_ktp_konsumen']"]), 0)
 
@@ -214,7 +247,7 @@ Mobile.tap(findTestObject('Object Repository/xpath', ['xpath' : "//*[@class = 'a
 // UPLOAD
 Mobile.scrollToText('Upload')
 Mobile.tap(findTestObject('Object Repository/xpath', ['xpath' : "//*[@class = 'android.widget.Button' and (@text = 'Upload' or . = 'Upload') and @resource-id = 'com.emobile.mobileentry:id/upload_button']"]), 0)
-Mobile.delay(7)
+Mobile.delay(15)
 
 // SAVE
 Mobile.tap(findTestObject('Object Repository/xpath', ['xpath' : "//*[@class = 'android.widget.Button' and (@text = 'Save' or . = 'Save') and @resource-id = 'com.emobile.mobileentry:id/save_button']"]), 0)

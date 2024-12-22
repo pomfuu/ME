@@ -122,6 +122,42 @@
       <value>Education</value>
       <variableId>71bcceb8-c818-4f03-9799-197d1cfa5fa0</variableId>
    </variableLinks>
+   <variableLinks>
+      <testDataLinkId>9e4c611b-ce10-4dbf-a922-25354a34d1b0</testDataLinkId>
+      <type>DATA_COLUMN</type>
+      <value>Alamat</value>
+      <variableId>88967b25-42d4-4259-8824-1d8406cd1cf1</variableId>
+   </variableLinks>
+   <variableLinks>
+      <testDataLinkId>9e4c611b-ce10-4dbf-a922-25354a34d1b0</testDataLinkId>
+      <type>DATA_COLUMN</type>
+      <value>Provinsi</value>
+      <variableId>8f9307b4-660f-4a21-a5c2-62cad548c933</variableId>
+   </variableLinks>
+   <variableLinks>
+      <testDataLinkId>9e4c611b-ce10-4dbf-a922-25354a34d1b0</testDataLinkId>
+      <type>DATA_COLUMN</type>
+      <value>Kota</value>
+      <variableId>ff06dbaa-f0bb-488e-8db6-20cabd46ec64</variableId>
+   </variableLinks>
+   <variableLinks>
+      <testDataLinkId>9e4c611b-ce10-4dbf-a922-25354a34d1b0</testDataLinkId>
+      <type>DATA_COLUMN</type>
+      <value>Kelurahan</value>
+      <variableId>04a8e9d0-f15c-4156-ac54-14a3709c6fb9</variableId>
+   </variableLinks>
+   <variableLinks>
+      <testDataLinkId>9e4c611b-ce10-4dbf-a922-25354a34d1b0</testDataLinkId>
+      <type>DATA_COLUMN</type>
+      <value>Kecamatan</value>
+      <variableId>a3e85f64-b361-4b49-a37f-4f9c301e8246</variableId>
+   </variableLinks>
+   <variableLinks>
+      <testDataLinkId></testDataLinkId>
+      <type>DEFAULT</type>
+      <value></value>
+      <variableId>112be78b-c60b-4414-b635-8c931d2890bf</variableId>
+   </variableLinks>
    <variable>
       <defaultValue>''</defaultValue>
       <description></description>
@@ -247,5 +283,47 @@
       <id>71bcceb8-c818-4f03-9799-197d1cfa5fa0</id>
       <masked>false</masked>
       <name>Education</name>
+   </variable>
+   <variable>
+      <defaultValue>''</defaultValue>
+      <description></description>
+      <id>88967b25-42d4-4259-8824-1d8406cd1cf1</id>
+      <masked>false</masked>
+      <name>Alamat</name>
+   </variable>
+   <variable>
+      <defaultValue>''</defaultValue>
+      <description></description>
+      <id>8f9307b4-660f-4a21-a5c2-62cad548c933</id>
+      <masked>false</masked>
+      <name>Provinsi</name>
+   </variable>
+   <variable>
+      <defaultValue>''</defaultValue>
+      <description></description>
+      <id>ff06dbaa-f0bb-488e-8db6-20cabd46ec64</id>
+      <masked>false</masked>
+      <name>Kota</name>
+   </variable>
+   <variable>
+      <defaultValue>''</defaultValue>
+      <description></description>
+      <id>04a8e9d0-f15c-4156-ac54-14a3709c6fb9</id>
+      <masked>false</masked>
+      <name>Kelurahan</name>
+   </variable>
+   <variable>
+      <defaultValue>''</defaultValue>
+      <description></description>
+      <id>a3e85f64-b361-4b49-a37f-4f9c301e8246</id>
+      <masked>false</masked>
+      <name>Kecamatan</name>
+   </variable>
+   <variable>
+      <defaultValue>''</defaultValue>
+      <description></description>
+      <id>112be78b-c60b-4414-b635-8c931d2890bf</id>
+      <masked>false</masked>
+      <name>TempatLahir</name>
    </variable>
 </TestCaseEntity>
