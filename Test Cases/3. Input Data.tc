@@ -9,8 +9,8 @@
       <combinationType>ONE</combinationType>
       <id>942ff84b-0c19-49f6-ab88-8a5a3bf4a2de</id>
       <iterationEntity>
-         <iterationType>ALL</iterationType>
-         <value></value>
+         <iterationType>SPECIFIC</iterationType>
+         <value>1</value>
       </iterationEntity>
       <testDataId>Data Files/New Test Data</testDataId>
    </testDataLinks>
@@ -97,6 +97,18 @@
       <type>DATA_COLUMN</type>
       <value>Type</value>
       <variableId>8fe16df6-4760-4b56-8b23-72ac5cf0a002</variableId>
+   </variableLinks>
+   <variableLinks>
+      <testDataLinkId>942ff84b-0c19-49f6-ab88-8a5a3bf4a2de</testDataLinkId>
+      <type>DATA_COLUMN</type>
+      <value>Membership</value>
+      <variableId>7d1e25f7-41d9-4796-b529-9de888b19f02</variableId>
+   </variableLinks>
+   <variableLinks>
+      <testDataLinkId></testDataLinkId>
+      <type>DEFAULT</type>
+      <value></value>
+      <variableId>b97c1dc1-6a60-416d-9ac2-f67a9bfde497</variableId>
    </variableLinks>
    <variable>
       <defaultValue>''</defaultValue>
@@ -195,5 +207,19 @@
       <id>8fe16df6-4760-4b56-8b23-72ac5cf0a002</id>
       <masked>false</masked>
       <name>Type</name>
+   </variable>
+   <variable>
+      <defaultValue>''</defaultValue>
+      <description></description>
+      <id>7d1e25f7-41d9-4796-b529-9de888b19f02</id>
+      <masked>false</masked>
+      <name>Membership</name>
+   </variable>
+   <variable>
+      <defaultValue>''</defaultValue>
+      <description></description>
+      <id>b97c1dc1-6a60-416d-9ac2-f67a9bfde497</id>
+      <masked>false</masked>
+      <name>JenisDebitur</name>
    </variable>
 </TestCaseEntity>

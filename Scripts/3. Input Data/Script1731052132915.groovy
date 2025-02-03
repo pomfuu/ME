@@ -39,8 +39,9 @@ Mobile.tap(findTestObject('Object Repository/xpath', ['xpath' : "//*[@class = 'a
 // Occupation Data
 Mobile.scrollToText('Occupation Data')
 Mobile.tap(findTestObject('Object Repository/xpath', ['xpath' : "//*[@class = 'android.widget.Button' and (@text = 'SELECT' or . = 'SELECT') and @resource-id = 'com.emobile.mobileentry:id/ekonomic_button']"]), 0)
+Mobile.setText(findTestObject('Object Repository/xpath', ['xpath' : "//*[@class = 'android.widget.EditText' and (@text = 'Economy Code' or . = 'Economy Code') and @resource-id = 'com.emobile.mobileentry:id/edtEkonomiCode']"]), '111308', 0)
 Mobile.tap(findTestObject('Object Repository/xpath', ['xpath' : "//*[@class = 'android.widget.Button' and (@text = 'Search' or . = 'Search') and @resource-id = 'com.emobile.mobileentry:id/search_button']"]), 0)
-Mobile.tap(findTestObject('Object Repository/xpath', ['xpath' : "//*[@class = 'android.widget.TextView' and (@text = '990000 AKTIVITAS BADAN INTERNASIONAL DAN BADAN EKSTRA INTERNASIONAL LAINNYA' or . = '990000 AKTIVITAS BADAN INTERNASIONAL DAN BADAN EKSTRA INTERNASIONAL LAINNYA') and @resource-id = 'com.emobile.mobileentry:id/txtsearchResult']"]), 0)
+Mobile.tap(findTestObject('Object Repository/xpath', ['xpath' : "//*[@class = 'android.widget.TextView' and (@text = '111308 Pelayanan umum, lembaga nasional/internasional-ketenagakerjaan-Jasa Outsourcing' or . = '111308 Pelayanan umum, lembaga nasional/internasional-ketenagakerjaan-Jasa Outsourcing') and @resource-id = 'com.emobile.mobileentry:id/txtsearchResult']"]), 0)
 
 Mobile.setText(findTestObject('Object Repository/xpath', ['xpath' : "//*[@class = 'android.widget.EditText' and (@text = 'Company Name' or . = 'Company Name') and @resource-id = 'com.emobile.mobileentry:id/edtCompanyName']"]), 'PT' + NamaKonsumen, 0)
 Mobile.hideKeyboard();
@@ -62,6 +63,7 @@ Mobile.scrollToText('Dealer / Vehicle')
 Mobile.tap(findTestObject('Object Repository/xpath', ['xpath' : "//*[@class = 'android.widget.Button' and (@text = 'SELECT' or . = 'SELECT') and @resource-id = 'com.emobile.mobileentry:id/dealer_name_button']"]), 0)
 Mobile.tap(findTestObject('Object Repository/xpath', ['xpath' : "//*[@class = 'android.widget.Button' and (@text = 'Search' or . = 'Search') and @resource-id = 'com.emobile.mobileentry:id/search_button']"]), 0)
 Mobile.setText(findTestObject('Object Repository/xpath', ['xpath' : "//*[@class = 'android.widget.EditText' and (@text = 'Dealer Name' or . = 'Dealer Name') and @resource-id = 'com.emobile.mobileentry:id/edtEkonomiCode']"]), Dealer, 0)
+Mobile.hideKeyboard()
 Mobile.tap(findTestObject('Object Repository/xpath', ['xpath' : "//*[@class = 'android.widget.Button' and (@text = 'Search' or . = 'Search') and @resource-id = 'com.emobile.mobileentry:id/search_button']"]), 0)
 Mobile.tap(findTestObject('Object Repository/xpath', ['xpath' : "//android.widget.RelativeLayout[1]/android.widget.ListView[1]/android.widget.TextView[1]"]), 0)
 
@@ -73,20 +75,26 @@ Mobile.tap(findTestObject('Object Repository/xpath', ['xpath' : "//android.widge
 Mobile.scrollToText('Data Kendaraan')
 Mobile.tap(findTestObject('Object Repository/xpath', ['xpath' : "//*[@class = 'android.widget.Button' and (@text = 'SELECT' or . = 'SELECT') and @resource-id = 'com.emobile.mobileentry:id/brand_button']"]), 0)
 Mobile.setText(findTestObject('Object Repository/xpath', ['xpath' : "//android.widget.RelativeLayout[1]/android.widget.LinearLayout[1]/android.widget.EditText[1]"]), Brand, 0)
+Mobile.hideKeyboard()
 Mobile.tap(findTestObject('Object Repository/xpath', ['xpath' : "//*[@class = 'android.widget.Button' and (@text = 'Search' or . = 'Search') and @resource-id = 'com.emobile.mobileentry:id/search_button']"]), 0)
 Mobile.tap(findTestObject('Object Repository/xpath', ['xpath' : "//android.widget.RelativeLayout[1]/android.widget.ListView[1]/android.widget.TextView[1]"]), 0)
 
 // Model
 Mobile.tap(findTestObject('Object Repository/xpath', ['xpath' : "//*[@class = 'android.widget.Button' and (@text = 'SELECT' or . = 'SELECT') and @resource-id = 'com.emobile.mobileentry:id/model_button']"]), 0)
 Mobile.setText(findTestObject('Object Repository/xpath', ['xpath' : "//android.widget.RelativeLayout[1]/android.widget.LinearLayout[1]/android.widget.EditText[1]"]), Model, 0)
+Mobile.hideKeyboard()
 Mobile.tap(findTestObject('Object Repository/xpath', ['xpath' : "//*[@class = 'android.widget.Button' and (@text = 'Search' or . = 'Search') and @resource-id = 'com.emobile.mobileentry:id/search_button']"]), 0)
 Mobile.tap(findTestObject('Object Repository/xpath', ['xpath' : "//android.widget.RelativeLayout[1]/android.widget.ListView[1]/android.widget.TextView[1]"]), 0)
 
 // Type
-Mobile.tap(findTestObject('Object Repository/xpath', ['xpath' : "//android.widget.LinearLayout[3]/android.widget.Button[1]"]), 0)
-Mobile.setText(findTestObject('Object Repository/xpath', ['xpath' : "//android.widget.RelativeLayout[1]/android.widget.LinearLayout[1]/android.widget.EditText[1]"]), Type, 0)
+Mobile.tap(findTestObject('Object Repository/xpath', ['xpath' : "//*[@class = 'android.widget.Button' and (@text = 'SELECT' or . = 'SELECT') and @resource-id = 'com.emobile.mobileentry:id/type_button']"]), 0)
+Mobile.setText(findTestObject('Object Repository/xpath', ['xpath' : "//*[@class = 'android.widget.EditText' and (@text = 'Type Name' or . = 'Type Name') and @resource-id = 'com.emobile.mobileentry:id/edtEkonomiCode']"]), Type, 0)
+Mobile.hideKeyboard()
 Mobile.tap(findTestObject('Object Repository/xpath', ['xpath' : "//*[@class = 'android.widget.Button' and (@text = 'Search' or . = 'Search') and @resource-id = 'com.emobile.mobileentry:id/search_button']"]), 0)
 Mobile.tap(findTestObject('Object Repository/xpath', ['xpath' : "//android.widget.RelativeLayout[1]/android.widget.ListView[1]/android.widget.TextView[1]"]), 0)
+// Year
+Mobile.setText(findTestObject('Object Repository/xpath', ['xpath' : "//*[@class = 'android.widget.EditText' and (@text = 'Year' or . = 'Year') and @resource-id = 'com.emobile.mobileentry:id/edtYearCar']"]), '2020', 0)
+Mobile.hideKeyboard()
 
 // Personal
 Mobile.scrollToText('Personal')
@@ -103,6 +111,15 @@ Mobile.scrollToText('Loan / Insurance Data')
 // Sales Type
 Mobile.tap(findTestObject('Object Repository/xpath', ['xpath' : "//*[@class = 'android.widget.Spinner' and @resource-id = 'com.emobile.mobileentry:id/spinnerSalesType' and (@text = '' or . = '')]"]), 0)
 Mobile.tap(findTestObject('Object Repository/xpath', ['xpath' : "//*[@class = 'android.widget.TextView' and (@text = '(1) DIRECT SALES' or . = '(1) DIRECT SALES') and @resource-id = 'android:id/text1']"]), 0)
+
+if(Membership=='Reguler') {
+	Mobile.setText(findTestObject('Object Repository/xpath', ['xpath' : "//*[@class = 'android.widget.EditText' and (@text = 'Lama Membership (tahun)' or . = 'Lama Membership (tahun)') and @resource-id = 'com.emobile.mobileentry:id/edtLamaMembership']"]), '5', 0)
+	Mobile.hideKeyboard();
+}
+
+if(JenisDebitur=='Non Debitur') {
+	
+}
 
 // Packet 2
 Mobile.setText(findTestObject('Object Repository/xpath', ['xpath' : "//*[@class = 'android.widget.EditText' and (@text = 'Packet 2' or . = 'Packet 2') and @resource-id = 'com.emobile.mobileentry:id/edtPacket2']"]), 'AC30', 0)
@@ -129,13 +146,7 @@ for (int i = 0; i < DownPayment.length(); i++) {
 Mobile.hideKeyboard();
 
 // Tenor
-Mobile.tap(findTestObject('Object Repository/xpath', ['xpath' : "//android.widget.ScrollView[1]/android.widget.LinearLayout[1]/android.widget.EditText[7]"]), 0)
-String Tenor = Tenor
-for (int i = 0; i < Tenor.length(); i++) {
-	  char digit = Tenor.charAt(i)
-	  int keyCode = Character.getNumericValue(digit) + 7
-	  driver.pressKeyCode(keyCode)
-}
+Mobile.setText(findTestObject('Object Repository/xpath', ['xpath' : "//*[@class = 'android.widget.EditText' and (@text = 'Tenor' or . = 'Tenor') and @resource-id = 'com.emobile.mobileentry:id/edtTenor']"]), Tenor,  0)
 Mobile.hideKeyboard();
 
 Mobile.tap(findTestObject('Object Repository/xpath', ['xpath' : "//*[@class = 'android.widget.RadioButton' and (@text = 'In Advance' or . = 'In Advance') and @resource-id = 'com.emobile.mobileentry:id/chckAdv']"]), 0)
@@ -152,7 +163,7 @@ Mobile.hideKeyboard();
 
 // ProvisionalFee
 Mobile.scrollToText('Provisional Fee')
-Mobile.tap(findTestObject('Object Repository/xpath', ['xpath' : "//android.widget.ScrollView[1]/android.widget.LinearLayout[1]/android.widget.EditText[3]"]), 0)
+Mobile.tap(findTestObject('Object Repository/xpath', ['xpath' : "//*[@class = 'android.widget.EditText' and (@text = 'Provisional Fee' or . = 'Provisional Fee') and @resource-id = 'com.emobile.mobileentry:id/edtProvisionalFee']"]), 0)
 String ProvisionalFee = ProvisionalFee
 for (int i = 0; i < ProvisionalFee.length(); i++) {
 	   char digit = ProvisionalFee.charAt(i)
@@ -172,3 +183,18 @@ Mobile.tap(findTestObject('Object Repository/xpath', ['xpath' : "//*[@class = 'a
 
 Mobile.tap(findTestObject('Object Repository/xpath', ['xpath' : "//*[@class = 'android.widget.Spinner' and @resource-id = 'com.emobile.mobileentry:id/spinnerBranchCarIns' and (@text = '' or . = '')]"]), 0)
 Mobile.tap(findTestObject('Object Repository/xpath', ['xpath' : "//*[@class = 'android.widget.TextView' and (@text = '(NCSI013) TIPE 3 - W2 - KKB' or . = '(NCSI013) TIPE 3 - W2 - KKB') and @resource-id = 'android:id/text1']"]), 0)
+
+// Insurance Type
+Mobile.tap(findTestObject('Object Repository/xpath', ['xpath' : "(//*[@class = 'android.widget.Spinner' and (@text = '' or . = '')])[3]"]), 0)
+Mobile.tap(findTestObject('Object Repository/xpath', ['xpath' : "//*[@class = 'android.widget.TextView' and (@text = 'ALL RISK' or . = 'ALL RISK') and @resource-id = 'android:id/text1']"]), 0)
+
+Mobile.tap(findTestObject('Object Repository/xpath', ['xpath' : "(//*[@class = 'android.widget.Spinner' and (@text = '' or . = '')])[4]"]), 0)
+Mobile.tap(findTestObject('Object Repository/xpath', ['xpath' : "//*[@class = 'android.widget.TextView' and (@text = 'ALL RISK' or . = 'ALL RISK') and @resource-id = 'android:id/text1']"]), 0)
+ 
+Mobile.tap(findTestObject('Object Repository/xpath', ['xpath' : "(//*[@class = 'android.widget.Spinner' and (@text = '' or . = '')])[5]"]), 0)
+Mobile.tap(findTestObject('Object Repository/xpath', ['xpath' : "//*[@class = 'android.widget.TextView' and (@text = 'ALL RISK' or . = 'ALL RISK') and @resource-id = 'android:id/text1']"]), 0)
+
+Mobile.tap(findTestObject('Object Repository/xpath', ['xpath' : "(//*[@class = 'android.widget.Spinner' and (@text = '' or . = '')])[6]"]), 0)
+Mobile.tap(findTestObject('Object Repository/xpath', ['xpath' : "//*[@class = 'android.widget.TextView' and (@text = 'ALL RISK' or . = 'ALL RISK') and @resource-id = 'android:id/text1']"]), 0)
+
+Mobile.tap(findTestObject('Object Repository/xpath', ['xpath' : "//*[@class = 'android.widget.RadioButton' and (@text = 'Prepaid' or . = 'Prepaid') and @resource-id = 'com.emobile.mobileentry:id/chckInsurancePaymentPrepaid']"]), 0)

@@ -9,8 +9,8 @@
       <combinationType>ONE</combinationType>
       <id>9e4c611b-ce10-4dbf-a922-25354a34d1b0</id>
       <iterationEntity>
-         <iterationType>ALL</iterationType>
-         <value></value>
+         <iterationType>SPECIFIC</iterationType>
+         <value>1</value>
       </iterationEntity>
       <testDataId>Data Files/New Test Data</testDataId>
    </testDataLinks>
@@ -43,12 +43,6 @@
       <type>DATA_COLUMN</type>
       <value>Penjamin</value>
       <variableId>7c3bfba6-cf32-4904-b97d-e3c1290b4af0</variableId>
-   </variableLinks>
-   <variableLinks>
-      <testDataLinkId>9e4c611b-ce10-4dbf-a922-25354a34d1b0</testDataLinkId>
-      <type>DATA_COLUMN</type>
-      <value>Cluster</value>
-      <variableId>3c5b4f1d-848b-4b2e-b26f-a5cc128b5f90</variableId>
    </variableLinks>
    <variableLinks>
       <testDataLinkId>9e4c611b-ce10-4dbf-a922-25354a34d1b0</testDataLinkId>
@@ -153,9 +147,9 @@
       <variableId>a3e85f64-b361-4b49-a37f-4f9c301e8246</variableId>
    </variableLinks>
    <variableLinks>
-      <testDataLinkId></testDataLinkId>
-      <type>DEFAULT</type>
-      <value></value>
+      <testDataLinkId>9e4c611b-ce10-4dbf-a922-25354a34d1b0</testDataLinkId>
+      <type>DATA_COLUMN</type>
+      <value>TempatLahir</value>
       <variableId>112be78b-c60b-4414-b635-8c931d2890bf</variableId>
    </variableLinks>
    <variable>
@@ -192,13 +186,6 @@
       <id>7c3bfba6-cf32-4904-b97d-e3c1290b4af0</id>
       <masked>false</masked>
       <name>Penjamin</name>
-   </variable>
-   <variable>
-      <defaultValue>''</defaultValue>
-      <description></description>
-      <id>3c5b4f1d-848b-4b2e-b26f-a5cc128b5f90</id>
-      <masked>false</masked>
-      <name>Cluster</name>
    </variable>
    <variable>
       <defaultValue>''</defaultValue>

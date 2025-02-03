@@ -47,12 +47,6 @@
    <variableLinks>
       <testDataLinkId>9e4c611b-ce10-4dbf-a922-25354a34d1b0</testDataLinkId>
       <type>DATA_COLUMN</type>
-      <value>Cluster</value>
-      <variableId>886d6095-cabd-4ead-ad95-f5b2f54b827f</variableId>
-   </variableLinks>
-   <variableLinks>
-      <testDataLinkId>9e4c611b-ce10-4dbf-a922-25354a34d1b0</testDataLinkId>
-      <type>DATA_COLUMN</type>
       <value>TopUp</value>
       <variableId>1609a0c2-2b9f-4cf8-b8e0-f5f91f47ac76</variableId>
    </variableLinks>
@@ -61,6 +55,24 @@
       <type>DATA_COLUMN</type>
       <value>RO</value>
       <variableId>2b4b7351-45f9-4258-82db-96509e3fadce</variableId>
+   </variableLinks>
+   <variableLinks>
+      <testDataLinkId>9e4c611b-ce10-4dbf-a922-25354a34d1b0</testDataLinkId>
+      <type>DATA_COLUMN</type>
+      <value>Segmentasi</value>
+      <variableId>6d7c586b-ae5b-44d2-aed3-5003e332c803</variableId>
+   </variableLinks>
+   <variableLinks>
+      <testDataLinkId>9e4c611b-ce10-4dbf-a922-25354a34d1b0</testDataLinkId>
+      <type>DATA_COLUMN</type>
+      <value>Membership</value>
+      <variableId>7c5c82d5-98fb-4d1f-8024-5c56c7cea42b</variableId>
+   </variableLinks>
+   <variableLinks>
+      <testDataLinkId>9e4c611b-ce10-4dbf-a922-25354a34d1b0</testDataLinkId>
+      <type>DATA_COLUMN</type>
+      <value>JenisDebitur</value>
+      <variableId>e32ca548-f1e1-4c36-a57a-ff1366033379</variableId>
    </variableLinks>
    <variable>
       <defaultValue>''</defaultValue>
@@ -100,13 +112,6 @@
    <variable>
       <defaultValue>''</defaultValue>
       <description></description>
-      <id>886d6095-cabd-4ead-ad95-f5b2f54b827f</id>
-      <masked>false</masked>
-      <name>Cluster</name>
-   </variable>
-   <variable>
-      <defaultValue>''</defaultValue>
-      <description></description>
       <id>1609a0c2-2b9f-4cf8-b8e0-f5f91f47ac76</id>
       <masked>false</masked>
       <name>TopUp</name>
@@ -117,5 +122,26 @@
       <id>2b4b7351-45f9-4258-82db-96509e3fadce</id>
       <masked>false</masked>
       <name>RO</name>
+   </variable>
+   <variable>
+      <defaultValue>''</defaultValue>
+      <description></description>
+      <id>6d7c586b-ae5b-44d2-aed3-5003e332c803</id>
+      <masked>false</masked>
+      <name>Segmentasi</name>
+   </variable>
+   <variable>
+      <defaultValue>''</defaultValue>
+      <description></description>
+      <id>7c5c82d5-98fb-4d1f-8024-5c56c7cea42b</id>
+      <masked>false</masked>
+      <name>Membership</name>
+   </variable>
+   <variable>
+      <defaultValue>''</defaultValue>
+      <description></description>
+      <id>e32ca548-f1e1-4c36-a57a-ff1366033379</id>
+      <masked>false</masked>
+      <name>JenisDebitur</name>
    </variable>
 </TestCaseEntity>

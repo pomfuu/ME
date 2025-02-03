@@ -6,7 +6,7 @@
    <defaultProfile>true</defaultProfile>
    <GlobalVariableEntity>
       <description></description>
-      <initValue>'hendry_mo'</initValue>
+      <initValue>'hendry_mo2'</initValue>
       <name>userID</name>
    </GlobalVariableEntity>
    <GlobalVariableEntity>

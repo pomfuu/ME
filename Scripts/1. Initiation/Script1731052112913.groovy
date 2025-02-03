@@ -42,11 +42,17 @@ Mobile.tap(findTestObject('Object Repository/xpath', ['xpath' : "//*[@class = 'a
 Mobile.tap(findTestObject('Object Repository/xpath', ['xpath' : "//android.widget.Spinner[1]"]), 0)
 Mobile.tap(findTestObject('Object Repository/xpath', ['xpath' : "//android.widget.CheckedTextView[2]"]), 0)
 
-Mobile.tap(findTestObject('Object Repository/xpath', ['xpath' : "//android.widget.Button[1]"]), 0)
+Mobile.takeScreenshot((((baseDir + GlobalVariable.screenshotPath)) + '/' + No + '/' + 'Mobile ID') + '1. Login.png', FailureHandling.STOP_ON_FAILURE)
 
+Mobile.tap(findTestObject('Object Repository/xpath', ['xpath' : "//android.widget.ScrollView/android.widget.LinearLayout/android.widget.Button[1]"]), 0)
+
+Mobile.delay(2)
+Mobile.takeScreenshot((((baseDir + GlobalVariable.screenshotPath)) + '/' + No + '/' + 'Mobile ID') + '2. After Login.png', FailureHandling.STOP_ON_FAILURE)
 // Welcome MO
 Mobile.tap(findTestObject('Object Repository/xpath', ['xpath' : "//android.widget.RelativeLayout[1]/android.widget.ListView[1]/android.widget.RelativeLayout[1]/android.widget.TextView[1]"]), 0)
 Mobile.tap(findTestObject('Object Repository/xpath', ['xpath' : "//android.widget.RelativeLayout[2]/android.widget.TextView[1]"]), 0)
+
+Mobile.takeScreenshot((((baseDir + GlobalVariable.screenshotPath)) + '/' + No + '/' + 'Mobile ID') + '3. Inisiasi.png', FailureHandling.STOP_ON_FAILURE)
 
 // Initation
 
@@ -92,20 +98,59 @@ switch(Penjamin) {
 		break;
 }
 
-// 5. Cluster
-switch(Cluster) {
-	case 'A':
-		Mobile.tap(findTestObject('Object Repository/xpath', ['xpath' : "//*[@class = 'android.widget.RadioButton' and (@text = 'A' or . = 'A')]"]), 0)
+
+// 5. Segmentasi
+switch(Segmentasi) {
+	case 'HNWI':
+		Mobile.tap(findTestObject('Object Repository/xpath', ['xpath' : "//*[@class = 'android.widget.RadioButton' and (@text = 'HNWI' or . = 'HNWI') and @resource-id = 'com.emobile.mobileentry:id/chckHNWI']"]), 0)
 		break;
-	case 'B':
-		Mobile.tap(findTestObject('Object Repository/xpath', ['xpath' : "//*[@class = 'android.widget.RadioButton' and (@text = 'B' or . = 'B')]"]), 0)
+	case 'Affluent':
+		Mobile.tap(findTestObject('Object Repository/xpath', ['xpath' : "//*[@class = 'android.widget.RadioButton' and (@text = 'Affluent' or . = 'Affluent') and @resource-id = 'com.emobile.mobileentry:id/chckAffluent']"]), 0)
+		break;
+	case 'Uppermass':
+		Mobile.tap(findTestObject('Object Repository/xpath', ['xpath' : "//*[@class = 'android.widget.RadioButton' and (@text = 'Uppermass' or . = 'Uppermass') and @resource-id = 'com.emobile.mobileentry:id/chckUpperMass']"]), 0)
 		break;
 	case 'Mass':
-		Mobile.tap(findTestObject('Object Repository/xpath', ['xpath' : "//*[@class = 'android.widget.RadioButton' and (@text = 'Mass' or . = 'Mass')]"]), 0)
+		Mobile.tap(findTestObject('Object Repository/xpath', ['xpath' : "//*[@class = 'android.widget.RadioButton' and (@text = 'Mass' or . = 'Mass') and @resource-id = 'com.emobile.mobileentry:id/chckMass']"]), 0)
+		break;
+	case 'Tidak Tersegmentasi':
+		Mobile.tap(findTestObject('Object Repository/xpath', ['xpath' : "//*[@class = 'android.widget.RadioButton' and (@text = 'Tidak Tersegmentasi' or . = 'Tidak Tersegmentasi') and @resource-id = 'com.emobile.mobileentry:id/chckTidakTersegmentasi']"]), 0)
 		break;
 }
 
-// 6. Top Up
+// 6. Membership
+switch(Membership) {
+	case 'Solitaire':
+		Mobile.tap(findTestObject('Object Repository/xpath', ['xpath' : "//*[@class = 'android.widget.RadioButton' and (@text = 'Solitaire' or . = 'Solitaire') and @resource-id = 'com.emobile.mobileentry:id/chckSolitaire']"]), 0)
+		break;
+	case 'Prioritas':
+		Mobile.tap(findTestObject('Object Repository/xpath', ['xpath' : "//*[@class = 'android.widget.RadioButton' and (@text = 'Prioritas' or . = 'Prioritas') and @resource-id = 'com.emobile.mobileentry:id/chckPrioritas']"]), 0)
+		break;
+	case 'Reguler':
+		Mobile.tap(findTestObject('Object Repository/xpath', ['xpath' : "//*[@class = 'android.widget.RadioButton' and (@text = 'Reguler' or . = 'Reguler') and @resource-id = 'com.emobile.mobileentry:id/chckReguler']"]), 0)
+		break;
+}
+
+// 7. Jenis Debitur
+switch(JenisDebitur) {
+	case 'Korporasi':
+		Mobile.tap(findTestObject('Object Repository/xpath', ['xpath' : "//*[@class = 'android.widget.RadioButton' and (@text = 'Korporasi' or . = 'Korporasi') and @resource-id = 'com.emobile.mobileentry:id/chckKorporasi']"]), 0)
+		break;
+	case 'Komersial':
+		Mobile.tap(findTestObject('Object Repository/xpath', ['xpath' : "//*[@class = 'android.widget.RadioButton' and (@text = 'Komersial' or . = 'Komersial') and @resource-id = 'com.emobile.mobileentry:id/chckKomersial']"]), 0)
+		break;
+	case 'SME':
+		Mobile.tap(findTestObject('Object Repository/xpath', ['xpath' : "//*[@class = 'android.widget.RadioButton' and (@text = 'SME' or . = 'SME') and @resource-id = 'com.emobile.mobileentry:id/chckSme']"]), 0)
+		break;
+	case 'KUK/KUR':
+		Mobile.tap(findTestObject('Object Repository/xpath', ['xpath' : "//*[@class = 'android.widget.RadioButton' and (@text = 'KUK/KUR' or . = 'KUK/KUR') and @resource-id = 'com.emobile.mobileentry:id/chckKukKur']"]), 0)
+		break;
+	case 'Non Debitur':
+		Mobile.tap(findTestObject('Object Repository/xpath', ['xpath' : "//*[@class = 'android.widget.RadioButton' and (@text = 'Non Debitur' or . = 'Non Debitur') and @resource-id = 'com.emobile.mobileentry:id/chckNonDebitur']"]), 0)
+		break;
+}
+
+// 8. Top Up
 switch(TopUp) {
 	case 'Yes':
 		Mobile.tap(findTestObject('Object Repository/xpath', ['xpath' : "//*[@class = 'android.widget.RadioButton' and (@text = 'Yes' or . = 'Yes') and @resource-id = 'com.emobile.mobileentry:id/chckTopUpYes']"]), 0)
@@ -115,7 +160,7 @@ switch(TopUp) {
 		break;
 }
 
-// 7. Repeat Order
+// 9. Repeat Order
 switch(RO) {
 	case 'Yes':
 		Mobile.tap(findTestObject('Object Repository/xpath', ['xpath' : "//*[@class = 'android.widget.RadioButton' and (@text = 'Yes' or . = 'Yes') and @resource-id = 'com.emobile.mobileentry:id/chckRepeatYes']"]), 0)
@@ -125,10 +170,13 @@ switch(RO) {
 		break;
 }
 
+Mobile.takeScreenshot((((baseDir + GlobalVariable.screenshotPath)) + '/' + No + '/' + 'Mobile ID') + '4. Before Proceed.png', FailureHandling.STOP_ON_FAILURE)
+
 // Proceed
 Mobile.tap(findTestObject('Object Repository/xpath', ['xpath' : "//*[@class = 'android.widget.Button' and (@text = 'Proceed' or . = 'Proceed') and @resource-id = 'com.emobile.mobileentry:id/proceed_button']"]), 0)
 
+Mobile.takeScreenshot((((baseDir + GlobalVariable.screenshotPath)) + '/' + No + '/' + 'Mobile ID') + '5.  Confirm Proceed.png', FailureHandling.STOP_ON_FAILURE)
 // Confirm
 Mobile.tap(findTestObject('Object Repository/xpath', ['xpath' : "//*[@class = 'android.widget.Button' and (@text = 'Yes' or . = 'Yes') and @resource-id = 'android:id/button1']"]), 0)
-Mobile.delay(2)
-Mobile.takeScreenshot((((baseDir + GlobalVariable.screenshotPath)) + '/' + No + '/' + 'Mobile ID') + '.png', FailureHandling.STOP_ON_FAILURE)
+Mobile.delay(3)
+Mobile.takeScreenshot((((baseDir + GlobalVariable.screenshotPath)) + '/' + No + '/' + 'Mobile ID') + '6. Mobile ID.png', FailureHandling.STOP_ON_FAILURE)

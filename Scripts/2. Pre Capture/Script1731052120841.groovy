@@ -21,17 +21,13 @@ import internal.GlobalVariable
 import io.appium.java_client.android.AndroidDriver
 import io.appium.java_client.android.AndroidKeyCode
 import io.appium.java_client.android.nativekey.AndroidKey
-
 import com.kms.katalon.core.configuration.RunConfiguration
 
 String baseDir = System.getProperty('user.dir')
-
 String packageName = 'com.emobile.mobileentry'
 String launcherActivity = 'com.example.bcafrevamp.screen.splash.SplashActivity'
-
 Mobile.startExistingApplication(packageName)
 AndroidDriver<?> driver = MobileDriverFactory.getDriver()
-
 String id = 'com.emobile.mobileentry:id'
 String adbPath = "\"C:/Users/clarien cahyono/AppData/Local/Android/Sdk/platform-tools/adb.exe\""
 
@@ -46,44 +42,11 @@ println("Uploading KTP image with command: " + adbCommandKTP)
 Runtime.getRuntime().exec(adbCommandKTP)
 Thread.sleep(2000)
 
-Mobile.tap(findTestObject('Object Repository/xpath', ['xpath' : "//android.widget.FrameLayout[1]/android.view.ViewGroup[1]/android.widget.ImageButton[1]"]), 0)
-Mobile.tap(findTestObject('Object Repository/xpath', ['xpath' : "//android.widget.ListView[1]/android.widget.LinearLayout[3]"]), 0)
-Mobile.delay(2)
-Mobile.tap(findTestObject('Object Repository/xpath', ['xpath' : "//android.widget.LinearLayout[4]/android.widget.RelativeLayout[1]/android.widget.FrameLayout[1]/android.widget.ImageView[1]"]), 0)
-Mobile.delay(2)
-
-Mobile.scrollToText('Save')
-Mobile.tap(findTestObject('Object Repository/xpath', ['xpath' : "//*[@class = 'android.widget.Button' and (@text = 'Save' or . = 'Save') and @resource-id = 'com.emobile.mobileentry:id/save_button_ktp_konsumen']"]), 0)
-// 2. KK Upload
-Mobile.tap(findTestObject('Object Repository/xpath', ['xpath' : "//*[@class = 'android.widget.Button' and (@text = 'Capture' or . = 'Capture') and @resource-id = 'com.emobile.mobileentry:id/btnKartuKeluarga']"]), 0)
-Mobile.tap(findTestObject('Object Repository/xpath', ['xpath' : "//android.widget.CheckedTextView[2]"]), 0)
-Mobile.tap(findTestObject('Object Repository/xpath', ['xpath' : "//android.widget.Button[1]"]), 0)
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                   
 String KKPath = RunConfiguration.getProjectDir() + "/Assets/kk_dummy.jpg"
 String adbCommandKK = adbPath + " push \"" + KKPath + "\" /sdcard/Download/kk_dummy.jpg"
 println("Uploading KK image with command: " + adbCommandKK)
 Runtime.getRuntime().exec(adbCommandKK)
 Thread.sleep(2000)
-
-Mobile.tap(findTestObject('Object Repository/xpath', ['xpath' : "//android.widget.LinearLayout[2]/android.widget.RelativeLayout[1]/android.widget.FrameLayout[1]/android.widget.ImageView[1]"]), 0)
-Mobile.delay(2)
-
-// Isi Kode Pos
-Mobile.tap(findTestObject('Object Repository/xpath', ['xpath' : "//android.widget.ScrollView[1]/android.widget.LinearLayout[1]/android.widget.EditText[2]"]), 0)
-String KodePos = KodePos
-for (int i = 0; i < KodePos.length(); i++) {
-	char digit = KodePos.charAt(i)
-	int keyCode = Character.getNumericValue(digit) + 7
-	driver.pressKeyCode(keyCode)
-}
-
-Mobile.scrollToText('Save')
-Mobile.tap(findTestObject('Object Repository/xpath', ['xpath' : "//*[@class = 'android.widget.Button' and (@text = 'Save' or . = 'Save') and @resource-id = 'com.emobile.mobileentry:id/save_button_kk']"]), 0)
-
-// 3. NPWP Upload
-Mobile.tap(findTestObject('Object Repository/xpath', ['xpath' : "//*[@class = 'android.widget.Button' and (@text = 'Capture' or . = 'Capture') and @resource-id = 'com.emobile.mobileentry:id/btnNpwpKonsumen']"]), 0)
-Mobile.tap(findTestObject('Object Repository/xpath', ['xpath' : "//android.widget.CheckedTextView[2]"]), 0)
-Mobile.tap(findTestObject('Object Repository/xpath', ['xpath' : "//android.widget.Button[1]"]), 0)
 
 String NPWPPath = RunConfiguration.getProjectDir() + "/Assets/npwp_dummy.jpg"
 String adbCommandNPWP = adbPath + " push \"" + NPWPPath + "\" /sdcard/Download/npwp_dummy.jpg"
@@ -91,39 +54,72 @@ println("Uploading NPWP image with command: " + adbCommandNPWP)
 Runtime.getRuntime().exec(adbCommandNPWP)
 Thread.sleep(2000)
 
-Mobile.tap(findTestObject('Object Repository/xpath', ['xpath' : "//android.widget.LinearLayout[1]/android.widget.RelativeLayout[1]/android.widget.FrameLayout[1]/android.widget.ImageView[1]"]), 0)
-Mobile.delay(2)
-
-Mobile.scrollToText('Save')
-Mobile.tap(findTestObject('Object Repository/xpath', ['xpath' : "//*[@class = 'android.widget.Button' and (@text = 'Save' or . = 'Save') and @resource-id = 'com.emobile.mobileentry:id/save_button_NK']"]), 0)
-
-// 4. FAP Upload
-Mobile.tap(findTestObject('Object Repository/xpath', ['xpath' : "//*[@class = 'android.widget.Button' and (@text = 'Capture' or . = 'Capture') and @resource-id = 'com.emobile.mobileentry:id/btnFormAplikasiPengajuan']"]), 0)
-Mobile.tap(findTestObject('Object Repository/xpath', ['xpath' : "//android.widget.CheckedTextView[2]"]), 0)
-Mobile.tap(findTestObject('Object Repository/xpath', ['xpath' : "//android.widget.Button[1]"]), 0)
- 
 String FAPPAth = RunConfiguration.getProjectDir() + "/Assets/fap_dummy.png"
 String adbCommandFAP = adbPath + " push \"" + FAPPAth + "\" /sdcard/Download/fap_dummy.png"
 println("Uploading NPWP image with command: " + FAPPAth)
 Runtime.getRuntime().exec(adbCommandFAP)
 Thread.sleep(2000)
 
-Mobile.tap(findTestObject('Object Repository/xpath', ['xpath' : "//android.widget.LinearLayout[3]/android.widget.RelativeLayout[1]/android.widget.FrameLayout[1]/android.widget.ImageView[1]"]), 0)
-Mobile.delay(2)
+Mobile.delay(7)
+Mobile.scrollToText('Save')
+Mobile.tap(findTestObject('Object Repository/xpath', ['xpath' : "//*[@class = 'android.widget.Button' and (@text = 'Save' or . = 'Save') and @resource-id = 'com.emobile.mobileentry:id/save_button_ktp_konsumen']"]), 0)
+
+// 2. KK Upload
+Mobile.tap(findTestObject('Object Repository/xpath', ['xpath' : "//*[@class = 'android.widget.Button' and (@text = 'Capture' or . = 'Capture') and @resource-id = 'com.emobile.mobileentry:id/btnKartuKeluarga']"]), 0)
+Mobile.tap(findTestObject('Object Repository/xpath', ['xpath' : "//android.widget.CheckedTextView[2]"]), 0)    
+Mobile.tap(findTestObject('Object Repository/xpath', ['xpath' : "//android.widget.Button[1]"]), 0)
+Mobile.delay(7)
+
+// Isi Kode Pos
+Mobile.tap(findTestObject('Object Repository/xpath', ['xpath' : "//*[@class = 'android.widget.Spinner' and @resource-id = 'com.emobile.mobileentry:id/spKodePosKK' and (@text = '' or . = '')]"]), 0)
+Mobile.tap(findTestObject('Object Repository/xpath', ['xpath' : "//*[@class = 'android.widget.TextView' and (@text = '10120' or . = '10120') and @resource-id = 'android:id/text1']"]), 0)
+Mobile.scrollToText('Save')
+Mobile.tap(findTestObject('Object Repository/xpath', ['xpath' : "//*[@class = 'android.widget.Button' and (@text = 'Save' or . = 'Save') and @resource-id = 'com.emobile.mobileentry:id/save_button_kk']"]), 0)
+
+// 3. Cover Buku Tabungan
+Mobile.tap(findTestObject('Object Repository/xpath', ['xpath' : "//*[@class = 'android.widget.Button' and (@text = 'Capture' or . = 'Capture') and @resource-id = 'com.emobile.mobileentry:id/btnCoverBukuTabungan']"]), 0)
+Mobile.tap(findTestObject('Object Repository/xpath', ['xpath' : "//android.widget.CheckedTextView[2]"]), 0)
+Mobile.tap(findTestObject('Object Repository/xpath', ['xpath' : "//android.widget.Button[1]"]), 0)
+Mobile.delay(7)
+Mobile.scrollToText('Save')
+Mobile.tap(findTestObject('Object Repository/xpath', ['xpath' : "//*[@class = 'android.widget.Button' and (@text = 'Save' or . = 'Save') and @resource-id = 'com.emobile.mobileentry:id/save_button_Cover']"]), 0)
+
+// 4. FAP Upload
+Mobile.tap(findTestObject('Object Repository/xpath', ['xpath' : "//*[@class = 'android.widget.Button' and (@text = 'Capture' or . = 'Capture') and @resource-id = 'com.emobile.mobileentry:id/btnFormAplikasiPengajuan']"]), 0)
+Mobile.tap(findTestObject('Object Repository/xpath', ['xpath' : "//android.widget.CheckedTextView[2]"]), 0)
+Mobile.tap(findTestObject('Object Repository/xpath', ['xpath' : "//android.widget.Button[1]"]), 0)
+Mobile.delay(7)
 Mobile.scrollToText('Save')
 Mobile.tap(findTestObject('Object Repository/xpath', ['xpath' : "//*[@class = 'android.widget.Button' and (@text = 'Save' or . = 'Save') and @resource-id = 'com.emobile.mobileentry:id/save_button_FormAplikasi']"]), 0)
 
-// FORCE SHUT ICR
-Mobile.tap(findTestObject('Object Repository/xpath', ['xpath' : "//*[@class = 'android.widget.Button' and (@text = 'View' or . = 'View') and @resource-id = 'com.emobile.mobileentry:id/btnKartuKeluarga']"]), 0)
-Mobile.tap(findTestObject('Object Repository/xpath', ['xpath' : "//*[@class = 'android.widget.Button' and (@text = 'Save' or . = 'Save') and @resource-id = 'com.emobile.mobileentry:id/save_button_kk']"]), 0)
-Mobile.delay(2)
+// 5. Bukti Segmentasi
+Mobile.scrollToText('Bukti Segmentasi/Membership KKB')
+Mobile.tap(findTestObject('Object Repository/xpath', ['xpath' : "//*[@class = 'android.widget.Button' and (@text = 'Bukti Segmentasi/Membership KKB' or . = 'Bukti Segmentasi/Membership KKB') and @resource-id = 'com.emobile.mobileentry:id/btnOtherDoc']"]), 0)
+Mobile.tap(findTestObject('Object Repository/xpath', ['xpath' : "//android.widget.CheckedTextView[2]"]), 0)
+Mobile.tap(findTestObject('Object Repository/xpath', ['xpath' : "//android.widget.Button[1]"]), 0)
+Mobile.setText(findTestObject('Object Repository/xpath', ['xpath' : "//*[@class = 'android.widget.EditText' and @resource-id = 'com.emobile.mobileentry:id/editTextDialogUserInput' and (@text = '' or . = '')]"]), 'segmentasi',  0)
+Mobile.hideKeyboard()
+Mobile.tap(findTestObject('Object Repository/xpath', ['xpath' : "//*[@class = 'android.widget.Button' and (@text = 'Simpan File Name' or . = 'Simpan File Name') and @resource-id = 'android:id/button1']"]), 0)
+Mobile.delay(7)
+Mobile.scrollToText('Save')
+Mobile.tap(findTestObject('Object Repository/xpath', ['xpath' : "//*[@class = 'android.widget.Button' and (@text = 'Save' or . = 'Save') and @resource-id = 'com.emobile.mobileentry:id/save_button_Siup']"]), 0)
+
+/*
+// other. NPWP Upload
+Mobile.tap(findTestObject('Object Repository/xpath', ['xpath' : "//*[@class = 'android.widget.Button' and (@text = 'Capture' or . = 'Capture') and @resource-id = 'com.emobile.mobileentry:id/btnNpwpKonsumen']"]), 0)
+Mobile.tap(findTestObject('Object Repository/xpath', ['xpath' : "//android.widget.CheckedTextView[2]"]), 0)
+Mobile.tap(findTestObject('Object Repository/xpath', ['xpath' : "//android.widget.Button[1]"]), 0)
+Mobile.delay(7)
+Mobile.scrollToText('Save')
+Mobile.tap(findTestObject('Object Repository/xpath', ['xpath' : "//*[@class = 'android.widget.Button' and (@text = 'Save' or . = 'Save') and @resource-id = 'com.emobile.mobileentry:id/save_button_NK']"]), 0)
+*/
 
 // -- VIEWING AND MAINTAIN SECTION --
 // 1. KTP Konsumen
+Mobile.scrollToText('KTP Konsumen (ICR)')
 Mobile.tap(findTestObject('Object Repository/xpath', ['xpath' : "//android.widget.RelativeLayout[1]/android.widget.Button[1]"]), 0)
+Mobile.setText(findTestObject('Object Repository/xpath', ['xpath' : "//*[@class = 'android.widget.EditText' and @resource-id = 'com.emobile.mobileentry:id/edtNoKtp' and (@text = '' or . = '')]"]), NIK,  0)
 Mobile.tap(findTestObject('Object Repository/xpath', ['xpath' : "//*[@class = 'android.widget.EditText' and @resource-id = 'com.emobile.mobileentry:id/edtNoKtp']"]), 0)
-Mobile.clearText(findTestObject('Object Repository/xpath', ['xpath' : "//*[@class = 'android.widget.EditText' and @resource-id = 'com.emobile.mobileentry:id/edtNoKtp']"]), 0)
-Mobile.setText(findTestObject('Object Repository/xpath', ['xpath' : "//*[@class = 'android.widget.EditText' and @resource-id = 'com.emobile.mobileentry:id/edtNoKtp']"]), NIK,  0)
 Mobile.hideKeyboard();
 
 Mobile.tap(findTestObject('Object Repository/xpath', ['xpath' : "//*[@class = 'android.widget.EditText' and @resource-id = 'com.emobile.mobileentry:id/edtName']"]), 0)
@@ -152,9 +148,10 @@ Mobile.tap(findTestObject('Object Repository/xpath', ['xpath' : "//*[@class = 'a
 Mobile.setText(findTestObject('Object Repository/xpath', ['xpath' : "//*[@class = 'android.widget.EditText' and @resource-id = 'com.emobile.mobileentry:id/edtAlamat']"]), Alamat,  0)
 Mobile.hideKeyboard();
 
-Mobile.tap(findTestObject('Object Repository/xpath', ['xpath' : "//hierarchy/android.widget.FrameLayout[1]/android.view.ViewGroup[1]/android.widget.FrameLayout[2]/android.widget.RelativeLayout[1]/android.widget.ScrollView[1]/android.widget.RelativeLayout[1]/android.widget.EditText[4]"]), 0)
-Mobile.setText(findTestObject('Object Repository/xpath', ['xpath' : "//hierarchy/android.widget.FrameLayout[1]/android.view.ViewGroup[1]/android.widget.FrameLayout[2]/android.widget.RelativeLayout[1]/android.widget.ScrollView[1]/android.widget.RelativeLayout[1]/android.widget.EditText[4]"]), Provinsi,  0)
+Mobile.tap(findTestObject('Object Repository/xpath', ['xpath' : "//*[@class = 'android.widget.EditText' and @resource-id = 'com.emobile.mobileentry:id/edtProvinsi' and (@text = '' or . = '')]"]), 0)
+Mobile.setText(findTestObject('Object Repository/xpath', ['xpath' : "//*[@class = 'android.widget.EditText' and @resource-id = 'com.emobile.mobileentry:id/edtProvinsi' and (@text = '' or . = '')]"]), Provinsi,  0)
 Mobile.hideKeyboard();
+Mobile.takeScreenshot((((baseDir + GlobalVariable.screenshotPath)) + '/' + No + '/' + 'Mobile ID') + '7. VIEW KTP 1.png', FailureHandling.STOP_ON_FAILURE)
 
 Mobile.tap(findTestObject('Object Repository/xpath', ['xpath' : "//*[@class = 'android.widget.EditText' and @resource-id = 'com.emobile.mobileentry:id/edtKota']"]), 0)
 Mobile.setText(findTestObject('Object Repository/xpath', ['xpath' : "//*[@class = 'android.widget.EditText' and @resource-id = 'com.emobile.mobileentry:id/edtKota']"]), Kota,  0)
@@ -167,6 +164,7 @@ Mobile.hideKeyboard();
 Mobile.tap(findTestObject('Object Repository/xpath', ['xpath' : "//*[@class = 'android.widget.EditText' and @resource-id = 'com.emobile.mobileentry:id/edtKelurahan']"]), 0)
 Mobile.setText(findTestObject('Object Repository/xpath', ['xpath' : "//*[@class = 'android.widget.EditText' and @resource-id = 'com.emobile.mobileentry:id/edtKelurahan']"]), Kelurahan,  0)
 Mobile.hideKeyboard();
+Mobile.takeScreenshot((((baseDir + GlobalVariable.screenshotPath)) + '/' + No + '/' + 'Mobile ID') + '8. VIEW KTP 2.png', FailureHandling.STOP_ON_FAILURE)
 
 Mobile.scrollToText('Save')
 Mobile.tap(findTestObject('Object Repository/xpath', ['xpath' : "//*[@class = 'android.widget.Button' and (@text = 'Save' or . = 'Save') and @resource-id = 'com.emobile.mobileentry:id/save_button_ktp_konsumen']"]), 0)
@@ -203,15 +201,28 @@ switch(Education) {
 
 Mobile.setText(findTestObject('Object Repository/xpath', ['xpath' : "//*[@resource-id = 'com.emobile.mobileentry:id/edtIbuKandung']"]), IbuKandung, 0)
 Mobile.hideKeyboard();
+Mobile.takeScreenshot((((baseDir + GlobalVariable.screenshotPath)) + '/' + No + '/' + 'Mobile ID') + '9. VIEW KK.png', FailureHandling.STOP_ON_FAILURE)
+
 Mobile.scrollToText('Save')
 Mobile.tap(findTestObject('Object Repository/xpath', ['xpath' : "//*[@class = 'android.widget.Button' and (@text = 'Save' or . = 'Save') and @resource-id = 'com.emobile.mobileentry:id/save_button_kk']"]), 0)
 
+// 3. Cover Buku Tabungan
+Mobile.tap(findTestObject('Object Repository/xpath', ['xpath' : "//*[@class = 'android.widget.Button' and (@text = 'View' or . = 'View') and @resource-id = 'com.emobile.mobileentry:id/btnCoverBukuTabungan']"]), 0)
+Mobile.setText(findTestObject('Object Repository/xpath', ['xpath' : "//*[@class = 'android.widget.EditText' and @resource-id = 'com.emobile.mobileentry:id/edtNoRekBCACover' and (@text = '' or . = '')]"]), '1234567891123', 0)
+Mobile.hideKeyboard()
+Mobile.setText(findTestObject('Object Repository/xpath', ['xpath' : "//*[@class = 'android.widget.EditText' and @resource-id = 'com.emobile.mobileentry:id/edtCabangBCACover' and (@text = '' or . = '')]"]), 'PONDOK INDAH', 0)
+Mobile.hideKeyboard()
+Mobile.takeScreenshot((((baseDir + GlobalVariable.screenshotPath)) + '/' + No + '/' + 'Mobile ID') + '10. VIEW COVER BUKU TABUNGAN.png', FailureHandling.STOP_ON_FAILURE)
+Mobile.tap(findTestObject('Object Repository/xpath', ['xpath' : "//*[@class = 'android.widget.Button' and (@text = 'Save' or . = 'Save') and @resource-id = 'com.emobile.mobileentry:id/save_button_Cover']"]), 0)
+
+/*
 // 3. NPWP
 Mobile.tap(findTestObject('Object Repository/xpath', ['xpath' : "//*[@resource-id = 'com.emobile.mobileentry:id/btnNpwpKonsumen']"]), 0)
 Mobile.setText(findTestObject('Object Repository/xpath', ['xpath' : "//android.widget.EditText[1]"]), NoNPWP, 0)
 Mobile.hideKeyboard();
 Mobile.scrollToText('Save')
 Mobile.tap(findTestObject('Object Repository/xpath', ['xpath' : "//*[@class = 'android.widget.Button' and (@text = 'Save' or . = 'Save') and @resource-id = 'com.emobile.mobileentry:id/save_button_NK']"]), 0)
+*/
 
 // 4. FAP
 Mobile.tap(findTestObject('Object Repository/xpath', ['xpath' : "//android.widget.RelativeLayout[1]/android.widget.Button[6]"]), 0)
@@ -240,15 +251,23 @@ for (int i = 0; i < HandphoneNumber.length(); i++) {
 	driver.pressKeyCode(keyCode)
 }
 Mobile.hideKeyboard();
-
+Mobile.takeScreenshot((((baseDir + GlobalVariable.screenshotPath)) + '/' + No + '/' + 'Mobile ID') + '11. VIEW FAP.png', FailureHandling.STOP_ON_FAILURE)
 Mobile.scrollToText('Save')
 Mobile.tap(findTestObject('Object Repository/xpath', ['xpath' : "//*[@class = 'android.widget.Button' and (@text = 'Save' or . = 'Save') and @resource-id = 'com.emobile.mobileentry:id/save_button_FormAplikasi']"]), 0)
+
+// 5. BUKTI SEGMENTASI
+Mobile.scrollToText('Bukti Segmentasi/Membership KKB')
+Mobile.tap(findTestObject('Object Repository/xpath', ['xpath' : "//*[@class = 'android.widget.Button' and (@text = 'View' or . = 'View') and @resource-id = 'com.emobile.mobileentry:id/btnOtherDoc']"]), 0)
+Mobile.takeScreenshot((((baseDir + GlobalVariable.screenshotPath)) + '/' + No + '/' + 'Mobile ID') + '12. VIEW Bukti Segmentasi.png', FailureHandling.STOP_ON_FAILURE)
+Mobile.tap(findTestObject('Object Repository/xpath', ['xpath' : "//*[@class = 'android.widget.Button' and (@text = 'Save' or . = 'Save') and @resource-id = 'com.emobile.mobileentry:id/save_button_Siup']"]), 0)
 
 // UPLOAD
 Mobile.scrollToText('Upload')
 Mobile.tap(findTestObject('Object Repository/xpath', ['xpath' : "//*[@class = 'android.widget.Button' and (@text = 'Upload' or . = 'Upload') and @resource-id = 'com.emobile.mobileentry:id/upload_button']"]), 0)
+Mobile.takeScreenshot((((baseDir + GlobalVariable.screenshotPath)) + '/' + No + '/' + 'Mobile ID') + '13. Upload File', FailureHandling.STOP_ON_FAILURE)
 Mobile.delay(15)
 
 // SAVE
 Mobile.tap(findTestObject('Object Repository/xpath', ['xpath' : "//*[@class = 'android.widget.Button' and (@text = 'Save' or . = 'Save') and @resource-id = 'com.emobile.mobileentry:id/save_button']"]), 0)
 Mobile.tap(findTestObject('Object Repository/xpath', ['xpath' : "//*[@class = 'android.widget.Button' and (@text = 'Yes' or . = 'Yes') and @resource-id = 'android:id/button1']"]), 0)
+Mobile.takeScreenshot((((baseDir + GlobalVariable.screenshotPath)) + '/' + No + '/' + 'Mobile ID') + '14. Save File', FailureHandling.STOP_ON_FAILURE)
